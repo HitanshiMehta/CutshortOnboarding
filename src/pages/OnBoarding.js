@@ -3,9 +3,12 @@ import { Pagination } from "../components/common/Pagination/Pagination";
 import { Content } from "../components/Content/Content";
 import { CommonHeader } from "../components/Header/Header";
 import { PageHeader } from "../components/PageHeader/PageHeader";
+import { ToggleDark } from "../components/ToggleDark/ToggleDark";
+import { ThemeContext, themes } from "../Context/ThemeContext";
 import { PageFormColumns, PageFormErrors } from "../utils/commonConstant";
 
 export const OnBoarding = () => {
+  const [darkMode, setDarkMode] = React.useState(true);
   const [page, setPage] = React.useState(1);
 
   const [userDetail, setUserdetail] = React.useState({
@@ -34,7 +37,17 @@ export const OnBoarding = () => {
   };
 
   return (
-    <div>
+    <div className={darkMode ? `Container-dark` : ""}>
+      <ThemeContext.Consumer>
+        {({ changeTheme }) => (
+          <ToggleDark
+            toggleDark={() => {
+              setDarkMode(!darkMode);
+              changeTheme(darkMode ? themes.light : themes.dark);
+            }}
+          />
+        )}
+      </ThemeContext.Consumer>
       <CommonHeader />
       <Pagination
         paginationCount={4}

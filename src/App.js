@@ -1,9 +1,12 @@
 import { OnBoarding } from "./pages/OnBoarding";
+import { ThemeContextWrapper } from "./Theme/ThemeWrapper";
 
 function App() {
   return (
     <div className="App d-flex">
-      <OnBoarding />
+      <ThemeContextWrapper>
+        <OnBoarding />
+      </ThemeContextWrapper>
     </div>
   );
 }
