@@ -1,0 +1,29 @@
+.pagination{
+  margin-bottom: 5rem;
+}
+.pagination-indicator {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: white;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  font-weight:500;
+}
+.pagination-connector {
+  height: 0.1rem;
+  width: 2.5rem;
+  background-color: var(--grey);
+}
+.active-pagination {
+  .pagination-indicator {
+    background-color: var(--primaryColor);
+    color: white;
+    border: 1px solid var(--primaryColor);
+  }
+  .pagination-connector {
+    background-color: var(--primaryColor);
+  }
+}

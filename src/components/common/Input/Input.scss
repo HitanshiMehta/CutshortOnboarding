@@ -1,0 +1,38 @@
+.input-label {
+  font-size: 1.2rem;
+  color: var(--secondaryColor);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.common-input {
+  width: 30rem;
+  border: 1px solid var(--grey);
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+.common-input::placeholder {
+  color: var(--grey);
+}
+.input-sub-label {
+  color: var(--grey);
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
+}
+.input-container {
+  display: flex;
+  align-items: flex-start;
+}
+.url-container {
+  color: var(--grey);
+  background-color: #f8f9fc;
+  border: 1px solid var(--grey);
+  border-radius: 0.4rem 0rem 0rem 0.4rem;
+  padding: 1.25rem;
+  font-size: 1.2rem;
+}
+.url-added {
+  border-radius: 0rem 0.4rem 0.4rem 0rem;
+  border-left: 0px;
+  width: 18rem;
+}
